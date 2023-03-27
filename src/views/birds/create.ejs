@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<%- include('../partials/header'); %>
+
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html>
+
+<%- include('../partials/header'); %>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <%- include('../partials/navbar'); %>
+  <div class="container mt-5" style="width: 20%;">
+    <h1 class="text-center">Bird Create Form</h1>
+    <form method="POST" action="/birds/create" class="mx-auto" style="width: 100%;">
+      <div class="form-group mb-3">
+        <input type="text" class="form-control" name="species" placeholder="Species" required />
+      </div>
+      <div class="form-group mb-3">
+        <input type="text" class="form-control" name="nickname" placeholder="Nickname" required />
+      </div>
+      <div class="form-group mb-3">
+        <select class="form-select" name="status">
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </div>
+      <div class="text-center">
+        <input type="submit" class="btn btn-primary" value="Create" />
+      </div>
+    </form>
+  </div>
+  </body>
+</html>
